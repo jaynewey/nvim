@@ -59,8 +59,6 @@ return require("packer").startup(function(use)
 
   	use 'petertriho/nvim-scrollbar'
 
-  	use 'ggandor/leap.nvim'
-
 		use { 'nvim-telescope/telescope-ui-select.nvim' }
 		use {
 			'rafi/telescope-thesaurus.nvim',
