@@ -64,5 +64,6 @@ return require("packer").startup(function(use)
 			'rafi/telescope-thesaurus.nvim',
 			requires = { 'nvim-telescope/telescope.nvim' }
 		}
+		use {'stevearc/dressing.nvim'}
 
 end)

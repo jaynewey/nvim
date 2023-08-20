@@ -10,6 +10,3 @@ vim.api.nvim_set_hl(0, "TelescopeBorder", {ctermfg=5})
 
 local telescope = require("telescope")
 
--- make select menu use telescope
-telescope.load_extension("ui-select")
-
