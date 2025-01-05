@@ -1,6 +1,3 @@
-local pywal = require('pywal')
-pywal.setup()
-
 -- use system clipboard as default yank register
 vim.opt.clipboard = {'unnamed', 'unnamedplus'}
 
@@ -26,27 +23,26 @@ vim.opt.smartcase = true
 
 -- hide EOF "~"
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-  callback = function() vim.wo.fillchars = 'eob: ' end,
+		callback = function() vim.wo.fillchars = 'eob: ' end,
 })
 
 -- hide line numbers in terminal
 vim.api.nvim_create_autocmd({"TermOpen"}, {
-  callback = function() 
-			vim.wo.number = false 
-			vim.opt.relativenumber = false 
-			vim.cmd("startinsert")
-	end,
+		callback = function()
+				vim.wo.number = false
+				vim.opt.relativenumber = false
+				vim.cmd("startinsert")
+		end,
 })
 
 -- automatically focus when switching to terminal
 vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
-  callback = function()
-		if vim.bo.buftype == 'terminal' then
-				vim.cmd("startinsert")
-		end
-	end,
+		callback = function()
+				if vim.bo.buftype == 'terminal' then
+						vim.cmd("startinsert")
+				end
+		end,
 })
 
 -- hide command line when not using
 vim.opt.cmdheight = 0
-

@@ -1,5 +1,6 @@
-require('gitsigns').setup(
-		{
+return {
+		"lewis6991/gitsigns.nvim",
+		opts = {
 				signs = {
 						add          = { text = '┃' },
 						change       = { text = '┃' },
@@ -8,7 +9,7 @@ require('gitsigns').setup(
 						changedelete = { text = '~' },
 						untracked    = { text = '┋' },
 				},
-				on_attach = function(bufnr) 
+				on_attach = function(bufnr)
 						local gs = package.loaded.gitsigns
 
 						local function map(mode, l, r, opts)
@@ -33,6 +34,6 @@ require('gitsigns').setup(
 						map('n', '<leader>hp', gs.preview_hunk)
 						map('n', '<leader>tb', gs.toggle_current_line_blame)
 				end
-		}
-)
-
+		},
+		event = "VeryLazy",
+}

@@ -1,3 +1,5 @@
+vim.g.mapleader = '\\'
+
 -- ctrl+w for deleting buffer
 vim.keymap.set("n", "<C-w>", ":Bdelete<CR>")
 
@@ -27,4 +29,3 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 
 -- don't overwrite clipboard sometimes
 vim.keymap.set("v", "p", '"_dP')  -- pasting
-
